@@ -101,6 +101,22 @@ int main()
 
     return 0;
 }
+void display()
+{
+    printf("List is ");
+    if(head==NULL)
+    {
+        printf("empty\n");
+    }
+    node *temp=head;
+
+    while(temp!=NULL)
+    {
+        printf("%d ",temp->value);
+        temp=temp->next;
+
+    }
+}
 
 
 void insert_first()
@@ -126,22 +142,7 @@ void insert_first()
                 head=temp;
         }
 }
-void display()
-{
-    printf("List is ");
-    if(head==NULL)
-    {
-        printf("empty\n");
-    }
-    node *temp=head;
 
-    while(temp!=NULL)
-    {
-        printf("%d ",temp->value);
-        temp=temp->next;
-
-    }
-}
 void insert_last()
 {
     node *temp;
